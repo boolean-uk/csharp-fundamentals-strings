@@ -57,8 +57,10 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
-           
-
+            string hello = "Hello, world!";
+            char[] str = hello.ToString().ToCharArray();
+            Array.Reverse(str);
+            sb.Append(str);
 
             // ...AND THIS LINE
 
