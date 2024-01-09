@@ -42,8 +42,7 @@ namespace csharp_fundamentals_strings.Main
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
-
+            sb.Append("Hello, world!");
 
             // ...AND THIS LINE
 
@@ -57,8 +56,16 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
+            // sb.Append("Hello, world!").ToString().Reverse().ToString();
 
+            sb.Append("Hello, world!");
 
+            // 2. Convert StringBuilder content to a string, reverse it, and update the StringBuilder
+            string reversedString = sb.ToString();
+            char[] charArray = reversedString.ToCharArray();
+            Array.Reverse(charArray);
+            sb.Clear();
+            sb.Append(charArray);
 
             // ...AND THIS LINE
 
@@ -72,8 +79,14 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, remove the comma.
             // WRITE YOUR CODE BETWEEN THIS LINE...
+            sb.Append("Hello, world!");
 
-
+            // 2. Remove the comma
+            int index = sb.ToString().IndexOf(','); // Find the index of the comma
+            if (index != -1) // Check if the comma exists
+            {
+                sb.Remove(index, 1); // Remove the comma at the found index
+            }
 
             // ...AND THIS LINE
 
@@ -87,7 +100,8 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, replace the word "world" with the word "C#"
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
+            sb.Append("Hello, world!");
+            sb.Replace("world", "C#");
 
 
             // ...AND THIS LINE
