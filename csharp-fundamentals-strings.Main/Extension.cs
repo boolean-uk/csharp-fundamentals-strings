@@ -42,7 +42,7 @@ namespace csharp_fundamentals_strings.Main
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
+            
 
 
             // ...AND THIS LINE
