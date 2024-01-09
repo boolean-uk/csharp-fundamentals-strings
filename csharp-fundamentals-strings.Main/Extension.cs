@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,12 +39,11 @@ namespace csharp_fundamentals_strings.Main
 
         public StringBuilder one()
         {
-            StringBuilder sb = new StringBuilder();
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
-
+            StringBuilder sb = new StringBuilder("Hello, world!");
 
             // ...AND THIS LINE
 
@@ -52,28 +52,32 @@ namespace csharp_fundamentals_strings.Main
 
         public StringBuilder two()
         {
-            StringBuilder sb = new StringBuilder();
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
+            StringBuilder sb = new StringBuilder("Hello, world!");
+            StringBuilder reversedSb = new StringBuilder();
 
+            for (int i = 0; i < sb.Length; i++)
+            {
+                reversedSb.Insert(0, sb[i]);
+            }
 
-            // ...AND THIS LINE
-
-            return sb;
+            return reversedSb;
         }
+
 
         public StringBuilder three()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder("Hello, world!");
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, remove the comma.
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
-
+            sb.Remove(5,1);
 
             // ...AND THIS LINE
 
@@ -82,13 +86,13 @@ namespace csharp_fundamentals_strings.Main
 
         public StringBuilder four()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder("Hello, world!");
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, replace the word "world" with the word "C#"
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
-
+            sb.Replace("world", "C#");
 
             // ...AND THIS LINE
 
