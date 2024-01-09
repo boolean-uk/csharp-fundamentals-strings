@@ -44,6 +44,6 @@ namespace csharp_fundamentals_strings.Main
 
 
         //TODO: 7. Using concatenation and existing members, set the faqUrl member below to the faq page of the boolean website
-        public string faqUrl => string.Concat(protocol + "://" + domain + "faq");
+        public string faqUrl => string.Concat(protocol + "://" + domain + "/faq");
     }
 }
