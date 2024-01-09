@@ -32,6 +32,7 @@ namespace csharp_fundamentals_strings.Test
         [Test]
         public void protocolShouldBeHttps()
         {
+            Console.WriteLine(this._exercise.protocol);
             Assert.AreEqual("https", this._exercise.protocol);
         }
 
