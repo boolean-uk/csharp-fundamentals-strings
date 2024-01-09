@@ -64,7 +64,7 @@ namespace csharp_fundamentals_strings.Main
             Array.Reverse(chars);
             string recombString = new string(chars);
 
-            sb.Replace("Hello, world!", recombString);
+            sb.Replace(sb.ToString(), recombString);
 
             // ...AND THIS LINE
 
