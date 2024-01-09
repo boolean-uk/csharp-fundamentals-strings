@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,7 +44,7 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
-
+            sb.Append("Hello, world!");
 
             // ...AND THIS LINE
 
@@ -58,7 +59,14 @@ namespace csharp_fundamentals_strings.Main
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
+            sb.Append("Hello, world!");
 
+            char[] charArray = new char[sb.Length];
+            sb.CopyTo(0, charArray, 0, sb.Length);
+            Array.Reverse(charArray);
+
+            sb.Clear();
+            sb.Append(charArray);
 
             // ...AND THIS LINE
 
@@ -73,6 +81,8 @@ namespace csharp_fundamentals_strings.Main
             // 2. After adding the message, remove the comma.
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
+            sb.Append("Hello, world!");
+            sb.Remove(5, 1);
 
 
             // ...AND THIS LINE
@@ -88,6 +98,8 @@ namespace csharp_fundamentals_strings.Main
             // 2. After adding the message, replace the word "world" with the word "C#"
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
+            sb.Append("Hello, world!");
+            sb.Replace("world", "C#");
 
 
             // ...AND THIS LINE
