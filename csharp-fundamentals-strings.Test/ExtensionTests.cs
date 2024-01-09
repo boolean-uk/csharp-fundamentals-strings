@@ -36,7 +36,7 @@ namespace csharp_fundamentals_strings.Test
         }
 
         [Test]
-        public void shouldSayHelloToJava()
+        public void shouldSayHelloToCS()
         {
             Assert.AreEqual("Hello, C#!", this.extension.four().ToString());
         }
