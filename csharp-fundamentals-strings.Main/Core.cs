@@ -36,7 +36,7 @@ namespace csharp_fundamentals_strings.Main
 
 
         //TODO: 5. Using the appropriate string method on url, set the value of the domain member below
-        public string domain => ;
+        public string domain => url.Split('/')[2];
 
 
         //TODO: 6. Set the length member below to the length of the url member
@@ -44,6 +44,6 @@ namespace csharp_fundamentals_strings.Main
 
 
         //TODO: 7. Using concatenation and existing members, set the faqUrl member below to the faq page of the boolean website
-        public string faqUrl => url.Insert(21,"/faq");
+        public string faqUrl => $"{protocol}://{domain}/faq";
     }
 }
