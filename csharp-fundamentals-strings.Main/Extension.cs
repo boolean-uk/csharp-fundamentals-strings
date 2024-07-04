@@ -42,8 +42,7 @@ namespace csharp_fundamentals_strings.Main
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
-
+            sb.Append("Hello, world!");
 
             // ...AND THIS LINE
 
@@ -58,11 +57,14 @@ namespace csharp_fundamentals_strings.Main
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
-
+            sb.Append("Hello, world!");
+            char[] charArray = sb.ToString().ToCharArray();
+            Array.Reverse(charArray);
+            sb.Append(charArray);
+            return new StringBuilder(new string(charArray));
 
             // ...AND THIS LINE
 
-            return sb;
         }
 
         public StringBuilder three()
@@ -72,7 +74,20 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, remove the comma.
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
+            sb.Append("Hello, world!");
+            int commaPosition = -1;
+            for (int i = 0; i < sb.Length; i++)
+            {
+                if (sb[i] == ',') // check each caracter if it is a comma
+                {
+                    commaPosition = i; 
+                    break; //exiting when we found it
+                }
+            }
+                if (commaPosition != -1)   //if we find the comma
+            {
+                sb.Remove(commaPosition, 1);    //remove the comma
+            }
 
 
             // ...AND THIS LINE
@@ -87,8 +102,11 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, replace the word "world" with the word "C#"
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
-
+            sb.Append("Hello, world!");
+            if(sb.ToString().Contains("world")) //if message contains Work
+            {
+                sb.Replace("world", "C#"); // replace world by C#
+            }
 
             // ...AND THIS LINE
 
