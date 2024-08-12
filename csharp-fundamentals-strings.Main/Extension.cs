@@ -59,7 +59,7 @@ namespace csharp_fundamentals_strings.Main
             // WRITE YOUR CODE BETWEEN THIS LINE...
 
             sb.Append("Hello, world!");
-            sb.Replace("Hello, world!" , "!dlrow ,olleH");
+            sb.Replace("Hello, world!" , new string(sb.ToString().Reverse().ToArray()));
  
             // ...AND THIS LINE
 
