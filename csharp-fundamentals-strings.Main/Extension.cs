@@ -56,7 +56,8 @@ namespace csharp_fundamentals_strings.Main
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
             sb.Append("Hello, world!");
-            sb.Replace("Hello, world!", "!dlrow ,olleH");
+            //sb.Replace("Hello, world!", "!dlrow ,olleH");
+            sb = new StringBuilder(new string(sb.ToString().Reverse().ToArray()));
             // ...AND THIS LINE
 
             return sb;
@@ -70,7 +71,8 @@ namespace csharp_fundamentals_strings.Main
             // 2. After adding the message, remove the comma.
             // WRITE YOUR CODE BETWEEN THIS LINE...
             sb.Append("Hello, world!");
-            sb.Replace(", ", " ");
+            // sb.Replace(", ", " ");
+            sb.Remove(5, 1);
             // ...AND THIS LINE
 
             return sb;
