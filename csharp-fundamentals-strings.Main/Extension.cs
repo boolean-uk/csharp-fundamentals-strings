@@ -42,7 +42,7 @@ namespace csharp_fundamentals_strings.Main
 
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
+            sb.Append("Hello, world!");
 
 
             // ...AND THIS LINE
@@ -57,10 +57,18 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, use an appropriate StringBuilder method to reverse it
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
-
-
+            sb.Append("Hello, world!");
+            string reverseString = "";
+            for(int i = sb.Length - 1; i >= 0 ; i--)
+            {
+                reverseString += sb[i];
+            }
+            sb.Clear();
+            sb.Append(reverseString);
             // ...AND THIS LINE
+
+            //technically this isn't a Stringbuilder method. That's because there isn't one in the documentation for Stringbuilder
+            // this could also be solved by making it into a char array and use Reverse() on that array
 
             return sb;
         }
@@ -72,8 +80,8 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, remove the comma.
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
-
+            sb.Append("Hello, world!");
+            sb.Replace(",", "");
 
             // ...AND THIS LINE
 
@@ -87,7 +95,8 @@ namespace csharp_fundamentals_strings.Main
             // 1. Using the sb variable above, add "Hello, world!" to the StringBuilder
             // 2. After adding the message, replace the word "world" with the word "C#"
             // WRITE YOUR CODE BETWEEN THIS LINE...
-
+            sb.Append("Hello, world!");
+            sb.Replace("world", "C#");
 
 
             // ...AND THIS LINE
