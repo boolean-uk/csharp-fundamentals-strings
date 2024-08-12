@@ -67,6 +67,9 @@ namespace csharp_fundamentals_strings.Main
             sb.Append(reverseString);
             // ...AND THIS LINE
 
+            //technically this isn't a Stringbuilder method. That's because there isn't one in the documentation for Stringbuilder
+            // this could also be solved by making it into a char array and use Reverse() on that array
+
             return sb;
         }
 
